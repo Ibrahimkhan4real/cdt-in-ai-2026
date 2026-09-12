@@ -384,7 +384,7 @@ reviewers = page_head("Reviewers", "Call for reviewers",
 page("reviewers.html", "Reviewers", reviewers, "Call for reviewers and review guidelines for the CDT in AI Annual Conference 2026.")
 
 # ---------------------------------------------------------------- COMMITTEE
-PEOPLE = [("Chair", "Adeola Eze", "ezea2@uni.coventry.ac.uk"), ("Deputy chair", "Iqra Jilani", "jilanii@uni.coventry.ac.uk"), ("Deputy chair", "Muhammed Khan", "khanm442@uni.coventry.ac.uk")]
+PEOPLE = [("Chair", "Adeola Eze", "ezea2@uni.coventry.ac.uk"), ("Deputy chair", "Muhammed Khan", "khanm442@uni.coventry.ac.uk"), ("Deputy chair", "Iqra Jilani", "jilanii@uni.coventry.ac.uk")]
 committee = page_head("Committee", "Organising committee", "The conference is organised by postgraduate researchers of the Centre for Doctoral Training in AI.") + f'''
 <section class="wrap section tight-top">
   <ul class="people">{"".join(f'<li><span class="role">{r}</span><span class="name">{n}</span><a href="mailto:{e}">{e}</a></li>' for r, n, e in PEOPLE)}</ul>
