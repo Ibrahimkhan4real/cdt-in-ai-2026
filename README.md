@@ -3,7 +3,8 @@
 Static site for the Coventry University Centre for Doctoral Training in AI annual conference,
 **Artificial Intelligence across Domains: Research, Innovation and Impact**, Wednesday 7 October 2026.
 
-Plain HTML/CSS/JS, no build tooling required for hosting.
+Plain HTML/CSS/JS, no build tooling required for hosting. The layout implements the Claude Design file
+`CDT in AI Conference 2026.dc.html` (navy / gold / warm off-white, hairline structure, Source Serif 4 + Source Sans 3 from Google Fonts).
 
 ## Editing content
 
@@ -19,7 +20,14 @@ so `build.py` is the safer place to change anything shared.
 
 - Styles: `assets/css/style.css` (palette variables at the top)
 - Scripts: `assets/js/main.js` (mobile menu, countdown, past-date greying)
-- Images: `assets/img/` (`logo.png`, `poster.png`, `favicon.png`)
+- Images: `assets/img/` (`mark.png` square emblem used in header/footer, `poster.png`, `favicon.png`, `logo.png` full lock-up)
+
+### Common edits
+
+- **Keynote portraits**: in `build.py` replace the text inside `<div class="portrait">` with `<img src="assets/img/brusey.jpg" alt="Prof. James Brusey">`.
+- **Programme rows**: edit the `SCHEDULE` array at the top of `assets/js/main.js`; both the timeline and table views render from it. On 7 October 2026 the home page shows a "Happening now" bar driven by the same data.
+- **Add to calendar**: the buttons generate an `.ics` file in the browser; times are in `addToCalendar` in `main.js`.
+- **Countdowns**: the deadline and conference dates are constants at the top of `main.js`.
 
 ## Publishing on GitHub Pages
 
