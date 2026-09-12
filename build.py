@@ -120,7 +120,8 @@ home = f'''
 <section class="section">
   <div class="container">
     <div class="notice"><strong>Abstracts close Friday 18 September 2026.</strong> Submit a 250-word abstract and 100-word biography via EasyChair. Notification of outcome by 25 September 2026. <a href="call-for-papers.html">Read the full call for papers.</a></div>
-    <div class="grid grid-3" style="margin-top:28px">
+    <h2 style="margin-top:28px">Ways to take part</h2>
+    <div class="grid grid-3">
       <div class="card"><div class="big">20 min</div><h3>Paper presentations</h3><p>Full-length talks in the midday and afternoon panels, each followed by Q&amp;A.</p></div>
       <div class="card"><div class="big">5 min</div><h3>Lightning talks</h3><p>Short, focused talks in two blocks, well suited to work in its early stages.</p></div>
       <div class="card"><div class="big">All day</div><h3>Poster presentations</h3><p>On display from lunch through the closing session, with authors alongside. Awards presented at 15:45.</p></div>
@@ -255,7 +256,7 @@ def row(t, what, sub="", cls=""):
     return f"<tr{c}><td class=\"time\">{t}</td><td>{what}{s}</td></tr>"
 
 morning = "".join([
-    row("09:00 – 09:30", "Registration", "Tea and coffee available", "break"),
+    row("09:00 – 09:30", "Registration", "", "break"),
     row("09:30 – 10:00", "Welcome and introductions"),
     row("10:00 – 10:40", "Keynote: Prof. James Brusey", "Professor of Computer Science, Coventry University", "highlight"),
     row("10:40 – 11:00", "Keynote Q&amp;A"),
@@ -342,7 +343,7 @@ reviewers = banner("Reviewers", "Call for reviewers and review guidelines",
     <div class="grid grid-2" style="align-items:start">
       <div>
         <h2>Call for reviewers</h2>
-        <p>We invite CDT in AI students, supervisors and staff to review abstracts submitted to the conference. Each reviewer receives a small number of abstracts (typically three to five) matched to their expertise, and reviews are completed on EasyChair.</p>
+        <p>We invite CDT in AI students, supervisors and staff to review abstracts submitted to the conference. Each reviewer receives a small number of abstracts matched to their expertise, and reviews are completed on EasyChair.</p>
         <ul class="dates">
           <li data-date="2026-09-18"><time>18 September</time><div>Submissions close and abstracts are allocated to reviewers</div></li>
           <li data-date="2026-09-24"><time>24 September</time><div>Reviews due on EasyChair</div></li>
@@ -358,7 +359,7 @@ reviewers = banner("Reviewers", "Call for reviewers and review guidelines",
           <li><strong>Conflicts of interest</strong>Decline any abstract by your own supervisor, supervisee, close collaborator or research group, or where you cannot be impartial. Tell the committee and it will be reassigned.</li>
           <li><strong>Constructive tone</strong>Write the review you would want to receive. Be specific, be respectful and suggest improvements. Many authors are first-year researchers.</li>
           <li><strong>Timeliness</strong>Return reviews by the deadline so authors can be notified on 25 September.</li>
-          <li><strong>No AI-generated reviews</strong>Do not paste submissions into external AI tools. Your own expert judgement is what the committee needs.</li>
+          <li><strong>Your own judgement</strong>Reviews should reflect your own expert reading of the abstract. Do not share submissions with third parties or external tools.</li>
         </ul>
       </div>
     </div>
@@ -439,19 +440,20 @@ venue = banner("Venue", "Getting to the conference", "Room EC1 29, Sir Frank Whi
     <div class="grid grid-2" style="align-items:start">
       <div>
         <h2>Venue</h2>
-        <p><strong>Room EC1 29</strong><br>Sir Frank Whittle Building (Engineering and Computing)<br>Coventry University<br>Gosford Street<br>Coventry CV1 5DL<br>United Kingdom</p>
+        <p><strong>Room EC1 29</strong><br>Sir Frank Whittle Building<br>Coventry University<br>Gosford Street<br>Coventry CV1 5DL<br>United Kingdom</p>
+        <p style="font-size:.9rem;color:var(--ink-soft)">The building also fronts Gulson Road; the main campus map lists it under Gosford Street.</p>
         <p>The Sir Frank Whittle Building is on the main city-centre campus, next to the Lanchester Library and the William Morris Building, and is recognisable by its hexagonal window frames. Follow signs to EC1 29 from the main entrance on the day.</p>
         <p><a class="btn btn-navy" href="https://www.google.com/maps/search/?api=1&query=Sir+Frank+Whittle+Building+Coventry+University+CV1+5DL">Open in Google Maps</a></p>
         <h3 style="margin-top:28px">By train</h3>
-        <p>Coventry railway station is about a 15-minute walk from the building, or a short bus or taxi ride. Direct services run from London Euston, Birmingham New Street and Leicester.</p>
+        <p>Coventry railway station is a short walk, bus or taxi ride from the campus, with direct services from London, Birmingham and the wider West Midlands.</p>
         <h3>By car</h3>
         <p>Parking on campus is limited, so please use public city-centre car parks. Use the CV1 5DL postcode for navigation.</p>
         <h3>Accessibility</h3>
         <p>If you have access or dietary requirements, please email <a href="mailto:{RMAP}">{RMAP}</a> so we can make arrangements.</p>
       </div>
       <div>
-        <iframe class="map" title="Map showing the Sir Frank Whittle Building, Coventry University" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.5020%2C52.4050%2C-1.4940%2C52.4100&amp;layer=mapnik&amp;marker=52.4075%2C-1.4980"></iframe>
-        <p style="font-size:.85rem;color:var(--ink-soft);margin-top:8px"><a href="https://www.openstreetmap.org/?mlat=52.4075&amp;mlon=-1.4980#map=17/52.4075/-1.4980">View larger map on OpenStreetMap</a></p>
+        <iframe class="map" title="Map showing the Sir Frank Whittle Building, Coventry University" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.5040%2C52.4030%2C-1.4950%2C52.4080&amp;layer=mapnik&amp;marker=52.4053%2C-1.4996"></iframe>
+        <p style="font-size:.85rem;color:var(--ink-soft);margin-top:8px"><a href="https://www.openstreetmap.org/?mlat=52.4053&amp;mlon=-1.4996#map=17/52.4053/-1.4996">View larger map on OpenStreetMap</a></p>
         <div class="notice"><strong>On the day</strong><br>Registration opens at 09:00 in EC1 29. Lunch and refreshments are provided. Photography and recording will take place during the event; consent is requested on the form.</div>
       </div>
     </div>

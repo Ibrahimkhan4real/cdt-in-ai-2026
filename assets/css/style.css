@@ -6,6 +6,7 @@
   --navy-soft: #1f3a66;
   --gold: #b8912f;
   --gold-light: #d9b85c;
+  --gold-text: #7a5c10;
   --paper: #f5f2ec;
   --paper-2: #ebe6dc;
   --ink: #1b2233;
@@ -25,7 +26,7 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--navy-soft); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: var(--gold); }
+a:hover { color: var(--gold-text); }
 h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--navy); line-height: 1.2; margin: 0 0 .5em; font-weight: 600; }
 h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
 h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
@@ -33,7 +34,7 @@ h3 { font-size: 1.25rem; }
 p { margin: 0 0 1em; }
 .eyebrow {
   font-family: var(--font-sans); font-size: .78rem; letter-spacing: .18em; text-transform: uppercase;
-  color: var(--gold); font-weight: 700; margin-bottom: .6em;
+  color: var(--gold-text); font-weight: 700; margin-bottom: .6em;
 }
 .container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
 .skip-link { position: absolute; left: -999px; top: 8px; background: var(--gold); color: var(--navy-deep); padding: 8px 14px; z-index: 100; border-radius: 6px; }
