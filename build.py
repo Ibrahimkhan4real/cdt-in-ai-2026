@@ -308,8 +308,7 @@ speakers = page_head("Keynote Speakers", "Keynote speakers", "Two keynote sessio
 <section class="wrap section">
   <article class="speaker first">
     <div class="portrait-col">
-      <!-- To add a photo: replace the inner text with <img src="assets/img/brusey.jpg" alt="Prof. James Brusey"> -->
-      <div class="portrait" id="portrait-brusey">Photograph of Prof. James Brusey</div>
+      <div class="portrait" id="portrait-brusey"><img src="assets/img/brusey.jpg" width="190" height="238" alt="Prof. James Brusey"></div>
       <p class="slot-label">Keynote 1 of 2</p><p class="slot-time">10:00 – 10:40</p>
     </div>
     <div class="text">

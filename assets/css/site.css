@@ -240,6 +240,7 @@ strong { color: var(--navy); }
 .speaker + .speaker { margin-top: clamp(34px, 4vw, 52px); }
 .speaker .portrait-col { flex: 0 0 190px; max-width: 100%; }
 .portrait { width: 190px; height: 238px; max-width: 100%; border: 1px dashed var(--gold); background: var(--paper-3); color: var(--gold-text); font-family: var(--sans); font-size: 12px; letter-spacing: .06em; text-align: center; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.portrait:has(img) { border: 1px solid var(--line); padding: 0; }
 .portrait img { width: 100%; height: 100%; object-fit: cover; }
 .speaker .slot-label { font-size: 10.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--gold-text); margin: 14px 0 0; }
 .speaker .slot-time { font-size: 13px; color: var(--navy); margin: 3px 0 0; }
