@@ -27,7 +27,7 @@ so `build.py` is the safer place to change anything shared.
 - **Keynote portraits**: in `build.py` replace the text inside `<div class="portrait">` with `<img src="assets/img/brusey.jpg" alt="Prof. James Brusey">`.
 - **Programme rows**: edit the `SCHEDULE` objects at the top of `assets/js/site.js`; both the timeline and table views render from it. Confirmed presenter names go into the `slot()` calls in `build.py`. On 7 October 2026 the home page shows a "Happening now" bar driven by the same data.
 - **Add to calendar**: the buttons generate an `.ics` file in the browser from the conference date constants at the top of `site.js`.
-- **Countdowns**: the deadline and conference dates are constants at the top of `site.js`.
+- **Countdowns**: the deadline and conference dates are constants at the top of `site.js`; the header note and the home page Countdown cell tick every second as `24d 13h 05m 42s`, falling back to "Today" / "Closes today" / "Thank you for joining us" / "Submissions closed".
 
 ## Publishing on GitHub Pages
 

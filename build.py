@@ -154,7 +154,7 @@ home = f'''
     <div><dt>Date</dt><dd>Wed 7 October 2026</dd></div>
     <div><dt>Time</dt><dd>09:00 – 16:30</dd></div>
     <div><dt>Venue</dt><dd>EC1 29, Sir Frank Whittle</dd></div>
-    <div><dt>Countdown</dt><dd data-conference-countdown>7 October 2026</dd></div>
+    <div><dt>Countdown</dt><dd data-conference-countdown><span class="cd-digits">7 October 2026</span><span class="cd-label"></span></dd></div>
   </dl>
 </section>
 

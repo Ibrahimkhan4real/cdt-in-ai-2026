@@ -37,12 +37,34 @@
     });
   }
 
-  // Countdowns
+  // Countdowns: live, ticking every second as "24d 13h 05m 42s" (the days part drops below a day)
   var dD = daysUntil(DEADLINE);
-  var deadlineText = countdown(dD, { plural: 'days left', one: 'Closes tomorrow', zero: 'Closes today', past: 'Submissions closed' });
-  var conferenceText = countdown(daysUntil(CONF_START), { plural: 'days to go', one: 'Tomorrow', zero: 'Today', past: 'Thank you for joining us' });
-  document.querySelectorAll('[data-deadline-countdown]').forEach(function (el) { el.textContent = deadlineText; });
-  document.querySelectorAll('[data-conference-countdown]').forEach(function (el) { el.textContent = conferenceText; });
+  var confEls = document.querySelectorAll('[data-conference-countdown]');
+  var deadlineEls = document.querySelectorAll('[data-deadline-countdown]');
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function formatRemaining(ms) {
+    var t = Math.max(0, Math.floor(ms / 1000));
+    var d = Math.floor(t / 86400), h = Math.floor((t % 86400) / 3600), m = Math.floor((t % 3600) / 60), s = t % 60;
+    return (d > 0 ? d + 'd ' : '') + pad(h) + 'h ' + pad(m) + 'm ' + pad(s) + 's';
+  }
+  function tick() {
+    var t = new Date();
+    var confText, confLabel = '';
+    if (t >= CONF_END) confText = 'Thank you for joining us';
+    else if (t.toDateString() === CONF_START.toDateString()) confText = 'Today';
+    else { confText = formatRemaining(CONF_START - t); confLabel = 'to go'; }
+    confEls.forEach(function (el) {
+      var digits = el.querySelector('.cd-digits'), label = el.querySelector('.cd-label');
+      (digits || el).textContent = confText;
+      if (label) label.textContent = confLabel;
+    });
+    var deadlineText = t > DEADLINE ? 'Submissions closed'
+      : t.toDateString() === DEADLINE.toDateString() ? 'Closes today'
+      : formatRemaining(DEADLINE - t) + ' left';
+    deadlineEls.forEach(function (el) { el.textContent = deadlineText; });
+  }
+  tick();
+  setInterval(tick, 1000);
 
   // Dates lists: grey out past items and fill the live status
   document.querySelectorAll('[data-date]').forEach(function (li) {
