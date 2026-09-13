@@ -153,7 +153,7 @@ strong { color: var(--navy); }
 .keynote-band .two-col { gap: clamp(28px, 4vw, 60px); }
 .keynote-band .text { flex: 1 1 380px; }
 .keynote-band .emblem { flex: 0 1 240px; display: flex; align-items: flex-start; justify-content: center; }
-.keynote-band .emblem img { width: min(210px, 60vw); background: var(--mark-bg); padding: 16px; border: 1px solid rgba(217,184,92,.55); }
+.keynote-band .emblem img { width: min(240px, 60vw); height: auto; border: 1px solid rgba(217,184,92,.55); }
 .keynote-band h2 { font-size: clamp(24px, 2.7vw, 31px); line-height: 1.2; letter-spacing: -.01em; margin: 0 0 18px; }
 .keynote-band p.bio { font-size: 16.5px; line-height: 1.65; margin: 0 0 14px; max-width: 54ch; }
 .stats { display: flex; flex-wrap: wrap; border-top: 1px solid rgba(217,184,92,.45); margin-top: 24px; }

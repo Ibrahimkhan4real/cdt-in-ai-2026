@@ -178,7 +178,7 @@ home = f'''
       {stats()}
       <p style="margin-top:26px"><a class="arrow-link" href="speakers.html">Both keynote sessions →</a></p>
     </div>
-    <div class="emblem"><img src="assets/img/mark.png" alt="CDT in AI phoenix emblem"></div>
+    <div class="emblem"><img src="assets/img/brusey.jpg" width="380" height="475" alt="Prof. James Brusey"></div>
   </div>
 </section>
 
