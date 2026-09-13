@@ -9,7 +9,7 @@ Plain HTML/CSS/JS, no build tooling required for hosting. The layout implements 
 ## Editing content
 
 All page content lives in `build.py` (one shared header/footer, one block per page).
-After editing, regenerate the HTML and commit both. The build stamps a content hash onto the CSS and JS links so browsers never reuse a stale copy after a deploy:
+After editing, regenerate the HTML and commit it together with any CSS/JS change. The build appends a content hash to the CSS and JS links, so a rebuilt page always fetches matching assets (the HTML itself can be cached by browsers for up to 10 minutes):
 
 ```bash
 python3 build.py
@@ -20,13 +20,13 @@ so `build.py` is the safer place to change anything shared.
 
 - Styles: `assets/css/site.css` (palette variables at the top)
 - Scripts: `assets/js/site.js` (mobile menu, countdowns, programme timeline, calendar download)
-- Images: `assets/img/` (`mark.png` square emblem used in header/footer, `poster.png`, `favicon.png`, `logo.png` full lock-up)
+- Images: `assets/img/` (`mark.png` square emblem used in header/footer, `poster.png` full-size with `poster-web.jpg` shown inline, `favicon.ico`)
 
 ### Common edits
 
 - **Keynote portraits**: in `build.py` replace the text inside `<div class="portrait">` with `<img src="assets/img/brusey.jpg" alt="Prof. James Brusey">`.
-- **Programme rows**: edit the `SCHEDULE` array at the top of `assets/js/site.js`; both the timeline and table views render from it. On 7 October 2026 the home page shows a "Happening now" bar driven by the same data.
-- **Add to calendar**: the buttons generate an `.ics` file in the browser; times are in `addToCalendar` in `site.js`.
+- **Programme rows**: edit the `SCHEDULE` objects at the top of `assets/js/site.js`; both the timeline and table views render from it. Confirmed presenter names go into the `slot()` calls in `build.py`. On 7 October 2026 the home page shows a "Happening now" bar driven by the same data.
+- **Add to calendar**: the buttons generate an `.ics` file in the browser from the conference date constants at the top of `site.js`.
 - **Countdowns**: the deadline and conference dates are constants at the top of `site.js`.
 
 ## Publishing on GitHub Pages
