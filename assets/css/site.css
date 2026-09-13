@@ -2,6 +2,7 @@
    "CDT in AI Conference 2026.dc.html". Navy / gold / warm off-white, hairline structure,
    Source Serif 4 + Source Sans 3. */
 :root {
+  --site-build: "41662c53";
   --navy: #12284b; --navy-deep: #0b1a33; --navy-soft: #1f3a66;
   --gold: #b8912f; --gold-light: #d9b85c; --gold-text: #7a5c10;
   --paper: #f5f2ec; --paper-2: #ebe6dc; --paper-3: #efebe2; --tint: #faf7ef; --tint-live: #fbf6e8;

@@ -9,7 +9,7 @@ Plain HTML/CSS/JS, no build tooling required for hosting. The layout implements 
 ## Editing content
 
 All page content lives in `build.py` (one shared header/footer, one block per page).
-After editing, regenerate the HTML and commit both:
+After editing, regenerate the HTML and commit both. The build stamps a content hash onto the CSS and JS links so browsers never reuse a stale copy after a deploy:
 
 ```bash
 python3 build.py
@@ -18,16 +18,16 @@ python3 build.py
 You can also edit the `.html` files directly, but the nav/footer is duplicated across pages,
 so `build.py` is the safer place to change anything shared.
 
-- Styles: `assets/css/style.css` (palette variables at the top)
-- Scripts: `assets/js/main.js` (mobile menu, countdown, past-date greying)
+- Styles: `assets/css/site.css` (palette variables at the top)
+- Scripts: `assets/js/site.js` (mobile menu, countdowns, programme timeline, calendar download)
 - Images: `assets/img/` (`mark.png` square emblem used in header/footer, `poster.png`, `favicon.png`, `logo.png` full lock-up)
 
 ### Common edits
 
 - **Keynote portraits**: in `build.py` replace the text inside `<div class="portrait">` with `<img src="assets/img/brusey.jpg" alt="Prof. James Brusey">`.
-- **Programme rows**: edit the `SCHEDULE` array at the top of `assets/js/main.js`; both the timeline and table views render from it. On 7 October 2026 the home page shows a "Happening now" bar driven by the same data.
-- **Add to calendar**: the buttons generate an `.ics` file in the browser; times are in `addToCalendar` in `main.js`.
-- **Countdowns**: the deadline and conference dates are constants at the top of `main.js`.
+- **Programme rows**: edit the `SCHEDULE` array at the top of `assets/js/site.js`; both the timeline and table views render from it. On 7 October 2026 the home page shows a "Happening now" bar driven by the same data.
+- **Add to calendar**: the buttons generate an `.ics` file in the browser; times are in `addToCalendar` in `site.js`.
+- **Countdowns**: the deadline and conference dates are constants at the top of `site.js`.
 
 ## Publishing on GitHub Pages
 

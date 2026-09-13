@@ -7,8 +7,13 @@ import hashlib
 
 def _v(path):
     return hashlib.md5(Path(path).read_bytes()).hexdigest()[:8]
-CSS_V = _v("assets/css/style.css")
-JS_V = _v("assets/js/main.js")
+_css_path = Path("assets/css/site.css")
+_css = _css_path.read_text()
+import re as _re
+_css_unstamped = _re.sub(r'--site-build: "[^"]*";', '--site-build: "__BUILD__";', _css)
+CSS_V = hashlib.md5(_css_unstamped.encode()).hexdigest()[:8]
+_css_path.write_text(_css_unstamped.replace('--site-build: "__BUILD__";', f'--site-build: "{CSS_V}";'))
+JS_V = _v("assets/js/site.js")
 
 SITE = "CDT in AI Annual Conference 2026"
 EASYCHAIR = "https://easychair.org/conferences/?conf=cdtinaiannualconfere0"
@@ -76,7 +81,7 @@ FOOTER = f'''<footer class="site-footer">
   </div>
   <p class="copyright">© 2026 Centre for Doctoral Training in AI, Coventry University.</p>
 </footer>
-<script src="assets/js/main.js?v={JS_V}"></script>'''
+<script src="assets/js/site.js?v={JS_V}"></script>'''
 
 def page(filename, title, body, description):
     html = f'''<!DOCTYPE html>
@@ -90,7 +95,8 @@ def page(filename, title, body, description):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="assets/css/style.css?v={CSS_V}">
+<link rel="stylesheet" href="assets/css/site.css?v={CSS_V}">
+<script>window.addEventListener("load",function(){{try{{var v=getComputedStyle(document.documentElement).getPropertyValue("--site-build").trim();if(v!=="{CSS_V}"&&!sessionStorage.getItem("cdt-healed")){{sessionStorage.setItem("cdt-healed","1");location.reload();}}}}catch(e){{}}}});</script>
 </head>
 <body>
 {header(filename)}
