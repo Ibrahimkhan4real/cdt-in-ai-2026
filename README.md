@@ -20,7 +20,7 @@ so `build.py` is the safer place to change anything shared.
 
 - Styles: `assets/css/site.css` (palette variables at the top)
 - Scripts: `assets/js/site.js` (mobile menu, countdowns, programme timeline, calendar download)
-- Images: `assets/img/` (`mark.png` square emblem used in header/footer, `poster.png` full-size with `poster-web.jpg` shown inline, `favicon.ico`)
+- Images: `assets/img/` (`coventry-university-logo.jpg` Coventry University landscape logo used in header/footer, `poster.png` full-size with `poster-web.jpg` shown inline, `favicon.ico`)
 
 ### Common edits
 

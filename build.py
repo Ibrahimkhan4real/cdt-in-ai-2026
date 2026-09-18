@@ -33,7 +33,7 @@ def header(active):
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="index.html">
-      <img src="assets/img/mark.png" width="54" height="54" alt="Coventry University Centre for Doctoral Training in AI">
+      <img src="assets/img/coventry-university-logo.jpg" alt="Coventry University">
       <span><span class="title">CDT in AI Annual Conference 2026</span><span class="sub">Artificial Intelligence across Domains</span></span>
     </a>
     <div class="header-actions">
@@ -51,7 +51,7 @@ def header(active):
 FOOTER = f'''<footer class="site-footer">
   <div class="cols">
     <div>
-      <img src="assets/img/mark.png" alt="">
+      <img src="assets/img/coventry-university-logo.jpg" alt="Coventry University">
       <p class="ft-title">CDT in AI Annual Conference 2026</p>
       <p class="body">Artificial Intelligence across Domains: Research, Innovation and Impact.<br>Wednesday 7 October 2026 · 09:00 – 16:30<br>EC1 29, Sir Frank Whittle Building<br>Coventry University, Coventry CV1 5DL</p>
     </div>
